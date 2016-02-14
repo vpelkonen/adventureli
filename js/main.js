@@ -11,9 +11,10 @@
 
 	sounds.push({
 		name: "Fire",
+		credit: 'Credits to <a href="https://www.freesound.org/people/dobroide/sounds/4211/" target="_blank">dobroide in freesound.org</a>. <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC 3.0</a>',
 		urls: ['audio/fire.mp3'],
 		autoplay: true,
-		loop: true,
+		loop: false,
 		volume: 0.0
 	});
 
@@ -21,7 +22,7 @@
 		name: "Rainstorm",
 		urls: ['audio/rainstorm.mp3'],
 		autoplay: true,
-		loop: true,
+		loop: false,
 		volume: 0.0
 	});
 
@@ -29,15 +30,16 @@
 		name: "Birds",
 		urls: ['audio/birds.mp3'],
 		autoplay: true,
-		loop: true,
+		loop: false,
 		volume: 0.0
 	});
 
 	sounds.push({
 		name: "Brooding",
+		credit: 'Credits to <a href="http://www.freesound.org/people/klankbeeld/sounds/137070/" target="_blank">klankbeeld in freesound.org</a>. <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC 3.0</a>',
 		urls: ['audio/brooding.mp3'],
 		autoplay: true,
-		loop: true,
+		loop: false,
 		volume: 0.0
 	});
 
@@ -45,7 +47,7 @@
 		name: "Waves",
 		urls: ['audio/waves.mp3'],
 		autoplay: true,
-		loop: true,
+		loop: false,
 		volume: 0.0
 	});
 
@@ -61,7 +63,8 @@
 		playerControls.push(new Howl(sound));
 		// Add a name identifier to the player control object
 		playerControls[playerControls.length-1].name = sound.name;
-		var elem = '<h2>'+sound.name+'</h2><input class="'+sound.name+'" type="range" min="0" max="100" value="0"></input>'
+		var elem = '<h2>'+sound.name+'</h2><input class="'+sound.name+'" type="range" min="0" max="100" value="0"></input>';
+		sound.credit ? elem += sound.credit : '';
 		$('body').append(elem);
 	}
 
